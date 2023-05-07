@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import streamlit as st
 
 pd.set_option('display.max_columns', None)
 
@@ -33,3 +34,5 @@ y = df["target"]
 
 automl = AutoML(eval_metric="average_precision", results_path = "previous_autoML")
 automl.fit(X, y)
+
+st.write("Model trained")
