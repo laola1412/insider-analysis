@@ -21,7 +21,7 @@ input_df = pd.DataFrame({
 })
 
 # Make a prediction using your machine learning model
-prediction = automl.predict(input_df)
+prediction = model.predict(input_df)
 
 # Display the prediction to the user
 st.subheader("Prediction")
