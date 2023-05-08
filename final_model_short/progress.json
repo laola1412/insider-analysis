@@ -1,0 +1,2267 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "golden_features",
+            "kmeans_features",
+            "insert_random_feature",
+            "features_selection",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Baseline",
+            "Linear",
+            "Decision Tree",
+            "Random Forest",
+            "Xgboost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.07411003112792969
+            },
+            {
+                "model_name": "1_Baseline",
+                "model_type": "Baseline",
+                "fit_level": "simple_algorithms",
+                "train_time": 0.23854541778564453
+            },
+            {
+                "model_name": "2_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 9.716890096664429
+            },
+            {
+                "model_name": "3_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 2.496006965637207
+            },
+            {
+                "model_name": "4_Default_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "default_algorithms",
+                "train_time": 3.3886911869049072
+            },
+            {
+                "model_name": "5_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 0.9475293159484863
+            },
+            {
+                "model_name": "6_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 6.960068464279175
+            },
+            {
+                "model_name": "6_Default_RandomForest_GoldenFeatures",
+                "model_type": "Random Forest",
+                "fit_level": "golden_features",
+                "train_time": 6.66880464553833
+            },
+            {
+                "model_name": "4_Default_Xgboost_GoldenFeatures",
+                "model_type": "Xgboost",
+                "fit_level": "golden_features",
+                "train_time": 3.3247110843658447
+            },
+            {
+                "model_name": "5_Default_NeuralNetwork_GoldenFeatures",
+                "model_type": "Neural Network",
+                "fit_level": "golden_features",
+                "train_time": 1.2997894287109375
+            },
+            {
+                "model_name": "6_Default_RandomForest_KMeansFeatures",
+                "model_type": "Random Forest",
+                "fit_level": "kmeans_features",
+                "train_time": 5.453716516494751
+            },
+            {
+                "model_name": "4_Default_Xgboost_KMeansFeatures",
+                "model_type": "Xgboost",
+                "fit_level": "kmeans_features",
+                "train_time": 4.001552104949951
+            },
+            {
+                "model_name": "5_Default_NeuralNetwork_KMeansFeatures",
+                "model_type": "Neural Network",
+                "fit_level": "kmeans_features",
+                "train_time": 1.6475307941436768
+            },
+            {
+                "model_name": "4_Default_Xgboost_GoldenFeatures_RandomFeature",
+                "model_type": "Xgboost",
+                "fit_level": "insert_random_feature",
+                "train_time": 2.2680845260620117
+            },
+            {
+                "model_name": "4_Default_Xgboost_GoldenFeatures_SelectedFeatures",
+                "model_type": "Xgboost",
+                "fit_level": "features_selection",
+                "train_time": 3.823957681655884
+            },
+            {
+                "model_name": "6_Default_RandomForest_SelectedFeatures",
+                "model_type": "Random Forest",
+                "fit_level": "features_selection",
+                "train_time": 4.018900156021118
+            },
+            {
+                "model_name": "5_Default_NeuralNetwork_GoldenFeatures_SelectedFeatures",
+                "model_type": "Neural Network",
+                "fit_level": "features_selection",
+                "train_time": 1.476332664489746
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.46810412406921387
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Baseline",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "1_Baseline",
+                "status": "trained",
+                "final_loss": -0.14397905759162305,
+                "train_time": 0.6752359867095947,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "gini",
+                    "max_depth": 3,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "2_DecisionTree",
+                "status": "trained",
+                "final_loss": -0.41323763753328735,
+                "train_time": 10.304852485656738,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "unrate": [
+                            "scale_normal"
+                        ],
+                        "m2supply": [
+                            "scale_normal"
+                        ],
+                        "m2supplychange": [
+                            "scale_normal"
+                        ],
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "WGS3MOchange": [
+                            "scale_normal"
+                        ],
+                        "WGS10YR": [
+                            "scale_normal"
+                        ],
+                        "WGS10YRchange": [
+                            "scale_normal"
+                        ],
+                        "WBAA": [
+                            "scale_normal"
+                        ],
+                        "WBAAchange": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEU": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEUchange": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUS": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUSchange": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSA": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSAchange": [
+                            "scale_normal"
+                        ],
+                        "INDPRO": [
+                            "scale_normal"
+                        ],
+                        "INDPROchange": [
+                            "scale_normal"
+                        ],
+                        "TCU": [
+                            "scale_normal"
+                        ],
+                        "TCUchange": [
+                            "scale_normal"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BUSINVchange": [
+                            "scale_normal"
+                        ],
+                        "DGORDER": [
+                            "scale_normal"
+                        ],
+                        "DGORDERchange": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANS": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANSchange": [
+                            "scale_normal"
+                        ],
+                        "TOTALSL": [
+                            "scale_normal"
+                        ],
+                        "TOTALSLchange": [
+                            "scale_normal"
+                        ],
+                        "HOUST": [
+                            "scale_normal"
+                        ],
+                        "HOUSTchange": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSA": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSAchange": [
+                            "scale_normal"
+                        ],
+                        "PSAVERT": [
+                            "scale_normal"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASEchange": [
+                            "scale_normal"
+                        ],
+                        "Insiders": [
+                            "scale_normal"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Value Traded": [
+                            "scale_normal"
+                        ],
+                        "Price": [
+                            "scale_normal"
+                        ],
+                        "1ybeforepricechange": [
+                            "scale_normal"
+                        ],
+                        " pe ": [
+                            "scale_normal"
+                        ],
+                        "1ychangepe": [
+                            "scale_normal"
+                        ],
+                        "ps": [
+                            "scale_normal"
+                        ],
+                        "pocf": [
+                            "scale_normal"
+                        ],
+                        "pfcf": [
+                            "scale_normal"
+                        ],
+                        "pb": [
+                            "scale_normal"
+                        ],
+                        "ptb": [
+                            "scale_normal"
+                        ],
+                        "evs": [
+                            "scale_normal"
+                        ],
+                        "evebitda": [
+                            "scale_normal"
+                        ],
+                        "evocf": [
+                            "scale_normal"
+                        ],
+                        "evfcf": [
+                            "scale_normal"
+                        ],
+                        "debttoequity": [
+                            "scale_normal"
+                        ],
+                        "debttoassets": [
+                            "scale_normal"
+                        ],
+                        "netdebtebitda": [
+                            "scale_normal"
+                        ],
+                        "currentratio": [
+                            "scale_normal"
+                        ],
+                        "interestcoverage": [
+                            "scale_normal"
+                        ],
+                        "capexocf": [
+                            "scale_normal"
+                        ],
+                        "capexsales": [
+                            "scale_normal"
+                        ],
+                        "sbcsales": [
+                            "scale_normal"
+                        ],
+                        "roic": [
+                            "scale_normal"
+                        ],
+                        "roe": [
+                            "scale_normal"
+                        ],
+                        "salesgrowth": [
+                            "scale_normal"
+                        ],
+                        "ebitgrowth": [
+                            "scale_normal"
+                        ],
+                        "fcfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3ysalesgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yocfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yequitygrowth": [
+                            "scale_normal"
+                        ],
+                        "debtgrowth": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "3_Linear",
+                "status": "trained",
+                "final_loss": -0.36479904724747986,
+                "train_time": 3.0766453742980957,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 4,
+                    "eval_metric": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_Default_Xgboost",
+                "status": "trained",
+                "final_loss": -0.5773539863115661,
+                "train_time": 3.981168746948242,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "unrate": [
+                            "scale_normal"
+                        ],
+                        "m2supply": [
+                            "scale_normal"
+                        ],
+                        "m2supplychange": [
+                            "scale_normal"
+                        ],
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "WGS3MOchange": [
+                            "scale_normal"
+                        ],
+                        "WGS10YR": [
+                            "scale_normal"
+                        ],
+                        "WGS10YRchange": [
+                            "scale_normal"
+                        ],
+                        "WBAA": [
+                            "scale_normal"
+                        ],
+                        "WBAAchange": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEU": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEUchange": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUS": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUSchange": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSA": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSAchange": [
+                            "scale_normal"
+                        ],
+                        "INDPRO": [
+                            "scale_normal"
+                        ],
+                        "INDPROchange": [
+                            "scale_normal"
+                        ],
+                        "TCU": [
+                            "scale_normal"
+                        ],
+                        "TCUchange": [
+                            "scale_normal"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BUSINVchange": [
+                            "scale_normal"
+                        ],
+                        "DGORDER": [
+                            "scale_normal"
+                        ],
+                        "DGORDERchange": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANS": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANSchange": [
+                            "scale_normal"
+                        ],
+                        "TOTALSL": [
+                            "scale_normal"
+                        ],
+                        "TOTALSLchange": [
+                            "scale_normal"
+                        ],
+                        "HOUST": [
+                            "scale_normal"
+                        ],
+                        "HOUSTchange": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSA": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSAchange": [
+                            "scale_normal"
+                        ],
+                        "PSAVERT": [
+                            "scale_normal"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASEchange": [
+                            "scale_normal"
+                        ],
+                        "Insiders": [
+                            "scale_normal"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Value Traded": [
+                            "scale_normal"
+                        ],
+                        "Price": [
+                            "scale_normal"
+                        ],
+                        "1ybeforepricechange": [
+                            "scale_normal"
+                        ],
+                        " pe ": [
+                            "scale_normal"
+                        ],
+                        "1ychangepe": [
+                            "scale_normal"
+                        ],
+                        "ps": [
+                            "scale_normal"
+                        ],
+                        "pocf": [
+                            "scale_normal"
+                        ],
+                        "pfcf": [
+                            "scale_normal"
+                        ],
+                        "pb": [
+                            "scale_normal"
+                        ],
+                        "ptb": [
+                            "scale_normal"
+                        ],
+                        "evs": [
+                            "scale_normal"
+                        ],
+                        "evebitda": [
+                            "scale_normal"
+                        ],
+                        "evocf": [
+                            "scale_normal"
+                        ],
+                        "evfcf": [
+                            "scale_normal"
+                        ],
+                        "debttoequity": [
+                            "scale_normal"
+                        ],
+                        "debttoassets": [
+                            "scale_normal"
+                        ],
+                        "netdebtebitda": [
+                            "scale_normal"
+                        ],
+                        "currentratio": [
+                            "scale_normal"
+                        ],
+                        "interestcoverage": [
+                            "scale_normal"
+                        ],
+                        "capexocf": [
+                            "scale_normal"
+                        ],
+                        "capexsales": [
+                            "scale_normal"
+                        ],
+                        "sbcsales": [
+                            "scale_normal"
+                        ],
+                        "roic": [
+                            "scale_normal"
+                        ],
+                        "roe": [
+                            "scale_normal"
+                        ],
+                        "salesgrowth": [
+                            "scale_normal"
+                        ],
+                        "ebitgrowth": [
+                            "scale_normal"
+                        ],
+                        "fcfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3ysalesgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yocfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yequitygrowth": [
+                            "scale_normal"
+                        ],
+                        "debtgrowth": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 5,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": -0.41983388682336165,
+                "train_time": 1.4426400661468506,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 6,
+                    "eval_metric_name": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "6_Default_RandomForest",
+                "status": "trained",
+                "final_loss": -0.6005606266015439,
+                "train_time": 7.5577075481414795,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "golden_features": [
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "final_model_short",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 6,
+                    "eval_metric_name": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "6_Default_RandomForest_GoldenFeatures",
+                "status": "trained",
+                "final_loss": -0.5703916669841252,
+                "train_time": 7.2681403160095215,
+                "data_type": "original_golden_features",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "final_model_short",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 4,
+                    "eval_metric": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_Default_Xgboost_GoldenFeatures",
+                "status": "trained",
+                "final_loss": -0.617837798911279,
+                "train_time": 3.9227609634399414,
+                "data_type": "original_golden_features",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "unrate": [
+                            "scale_normal"
+                        ],
+                        "m2supply": [
+                            "scale_normal"
+                        ],
+                        "m2supplychange": [
+                            "scale_normal"
+                        ],
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "WGS3MOchange": [
+                            "scale_normal"
+                        ],
+                        "WGS10YR": [
+                            "scale_normal"
+                        ],
+                        "WGS10YRchange": [
+                            "scale_normal"
+                        ],
+                        "WBAA": [
+                            "scale_normal"
+                        ],
+                        "WBAAchange": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEU": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEUchange": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUS": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUSchange": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSA": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSAchange": [
+                            "scale_normal"
+                        ],
+                        "INDPRO": [
+                            "scale_normal"
+                        ],
+                        "INDPROchange": [
+                            "scale_normal"
+                        ],
+                        "TCU": [
+                            "scale_normal"
+                        ],
+                        "TCUchange": [
+                            "scale_normal"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BUSINVchange": [
+                            "scale_normal"
+                        ],
+                        "DGORDER": [
+                            "scale_normal"
+                        ],
+                        "DGORDERchange": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANS": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANSchange": [
+                            "scale_normal"
+                        ],
+                        "TOTALSL": [
+                            "scale_normal"
+                        ],
+                        "TOTALSLchange": [
+                            "scale_normal"
+                        ],
+                        "HOUST": [
+                            "scale_normal"
+                        ],
+                        "HOUSTchange": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSA": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSAchange": [
+                            "scale_normal"
+                        ],
+                        "PSAVERT": [
+                            "scale_normal"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASEchange": [
+                            "scale_normal"
+                        ],
+                        "Insiders": [
+                            "scale_normal"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Value Traded": [
+                            "scale_normal"
+                        ],
+                        "Price": [
+                            "scale_normal"
+                        ],
+                        "1ybeforepricechange": [
+                            "scale_normal"
+                        ],
+                        " pe ": [
+                            "scale_normal"
+                        ],
+                        "1ychangepe": [
+                            "scale_normal"
+                        ],
+                        "ps": [
+                            "scale_normal"
+                        ],
+                        "pocf": [
+                            "scale_normal"
+                        ],
+                        "pfcf": [
+                            "scale_normal"
+                        ],
+                        "pb": [
+                            "scale_normal"
+                        ],
+                        "ptb": [
+                            "scale_normal"
+                        ],
+                        "evs": [
+                            "scale_normal"
+                        ],
+                        "evebitda": [
+                            "scale_normal"
+                        ],
+                        "evocf": [
+                            "scale_normal"
+                        ],
+                        "evfcf": [
+                            "scale_normal"
+                        ],
+                        "debttoequity": [
+                            "scale_normal"
+                        ],
+                        "debttoassets": [
+                            "scale_normal"
+                        ],
+                        "netdebtebitda": [
+                            "scale_normal"
+                        ],
+                        "currentratio": [
+                            "scale_normal"
+                        ],
+                        "interestcoverage": [
+                            "scale_normal"
+                        ],
+                        "capexocf": [
+                            "scale_normal"
+                        ],
+                        "capexsales": [
+                            "scale_normal"
+                        ],
+                        "sbcsales": [
+                            "scale_normal"
+                        ],
+                        "roic": [
+                            "scale_normal"
+                        ],
+                        "roe": [
+                            "scale_normal"
+                        ],
+                        "salesgrowth": [
+                            "scale_normal"
+                        ],
+                        "ebitgrowth": [
+                            "scale_normal"
+                        ],
+                        "fcfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3ysalesgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yocfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yequitygrowth": [
+                            "scale_normal"
+                        ],
+                        "debtgrowth": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "final_model_short",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 5,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_NeuralNetwork_GoldenFeatures",
+                "status": "trained",
+                "final_loss": -0.4761017154777161,
+                "train_time": 1.8769183158874512,
+                "data_type": "original_golden_features",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "kmeans_features": [
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "kmeans_features": {
+                        "results_path": "final_model_short"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 6,
+                    "eval_metric_name": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "6_Default_RandomForest_KMeansFeatures",
+                "status": "trained",
+                "final_loss": -0.5665072054958608,
+                "train_time": 6.044602870941162,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "kmeans_features": {
+                        "results_path": "final_model_short"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 4,
+                    "eval_metric": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_Default_Xgboost_KMeansFeatures",
+                "status": "trained",
+                "final_loss": -0.5600486938486277,
+                "train_time": 4.6074018478393555,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "unrate": [
+                            "scale_normal"
+                        ],
+                        "m2supply": [
+                            "scale_normal"
+                        ],
+                        "m2supplychange": [
+                            "scale_normal"
+                        ],
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "WGS3MOchange": [
+                            "scale_normal"
+                        ],
+                        "WGS10YR": [
+                            "scale_normal"
+                        ],
+                        "WGS10YRchange": [
+                            "scale_normal"
+                        ],
+                        "WBAA": [
+                            "scale_normal"
+                        ],
+                        "WBAAchange": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEU": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEUchange": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUS": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUSchange": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSA": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSAchange": [
+                            "scale_normal"
+                        ],
+                        "INDPRO": [
+                            "scale_normal"
+                        ],
+                        "INDPROchange": [
+                            "scale_normal"
+                        ],
+                        "TCU": [
+                            "scale_normal"
+                        ],
+                        "TCUchange": [
+                            "scale_normal"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BUSINVchange": [
+                            "scale_normal"
+                        ],
+                        "DGORDER": [
+                            "scale_normal"
+                        ],
+                        "DGORDERchange": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANS": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANSchange": [
+                            "scale_normal"
+                        ],
+                        "TOTALSL": [
+                            "scale_normal"
+                        ],
+                        "TOTALSLchange": [
+                            "scale_normal"
+                        ],
+                        "HOUST": [
+                            "scale_normal"
+                        ],
+                        "HOUSTchange": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSA": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSAchange": [
+                            "scale_normal"
+                        ],
+                        "PSAVERT": [
+                            "scale_normal"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASEchange": [
+                            "scale_normal"
+                        ],
+                        "Insiders": [
+                            "scale_normal"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Value Traded": [
+                            "scale_normal"
+                        ],
+                        "Price": [
+                            "scale_normal"
+                        ],
+                        "1ybeforepricechange": [
+                            "scale_normal"
+                        ],
+                        " pe ": [
+                            "scale_normal"
+                        ],
+                        "1ychangepe": [
+                            "scale_normal"
+                        ],
+                        "ps": [
+                            "scale_normal"
+                        ],
+                        "pocf": [
+                            "scale_normal"
+                        ],
+                        "pfcf": [
+                            "scale_normal"
+                        ],
+                        "pb": [
+                            "scale_normal"
+                        ],
+                        "ptb": [
+                            "scale_normal"
+                        ],
+                        "evs": [
+                            "scale_normal"
+                        ],
+                        "evebitda": [
+                            "scale_normal"
+                        ],
+                        "evocf": [
+                            "scale_normal"
+                        ],
+                        "evfcf": [
+                            "scale_normal"
+                        ],
+                        "debttoequity": [
+                            "scale_normal"
+                        ],
+                        "debttoassets": [
+                            "scale_normal"
+                        ],
+                        "netdebtebitda": [
+                            "scale_normal"
+                        ],
+                        "currentratio": [
+                            "scale_normal"
+                        ],
+                        "interestcoverage": [
+                            "scale_normal"
+                        ],
+                        "capexocf": [
+                            "scale_normal"
+                        ],
+                        "capexsales": [
+                            "scale_normal"
+                        ],
+                        "sbcsales": [
+                            "scale_normal"
+                        ],
+                        "roic": [
+                            "scale_normal"
+                        ],
+                        "roe": [
+                            "scale_normal"
+                        ],
+                        "salesgrowth": [
+                            "scale_normal"
+                        ],
+                        "ebitgrowth": [
+                            "scale_normal"
+                        ],
+                        "fcfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3ysalesgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yocfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yequitygrowth": [
+                            "scale_normal"
+                        ],
+                        "debtgrowth": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "kmeans_features": {
+                        "results_path": "final_model_short"
+                    }
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 5,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_NeuralNetwork_KMeansFeatures",
+                "status": "trained",
+                "final_loss": -0.44899872409216407,
+                "train_time": 2.3291714191436768,
+                "data_type": "original_kmeans_features",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "insert_random_feature": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "final_model_short",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    },
+                    "add_random_feature": true
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 4,
+                    "eval_metric": "average_precision",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "4_Default_Xgboost_GoldenFeatures_RandomFeature",
+                "status": "trained",
+                "final_loss": -0.5889956329213636,
+                "train_time": 2.8894596099853516,
+                "data_type": "original_golden_features",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "features_selection": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "final_model_short",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    },
+                    "drop_features": [
+                        "HOUST",
+                        "BUSINVchange",
+                        "ptb",
+                        "UNDCONTSA",
+                        "WBAA_ratio_WGS10YR",
+                        "TOTALSL",
+                        "DGORDER",
+                        "UNDCONTSA_multiply_WGS10YR",
+                        "TOTALSLchange",
+                        "BUSINV",
+                        "TCU",
+                        "INDPROchange",
+                        "fedfunds",
+                        "TCUchange",
+                        "SPCS20RSA",
+                        "TCUchange_ratio_WBAA",
+                        "DEXUSEU",
+                        "BOGMBASE",
+                        "WGS3MO",
+                        "HOUSTchange",
+                        "SPCS20RSAchange",
+                        "m2supply",
+                        "WGS10YR",
+                        "BUSLOANS",
+                        "PSAVERT",
+                        "netdebtebitda",
+                        "debtgrowth",
+                        "UNDCONTSAchange",
+                        "WBAAchange",
+                        "pfcf",
+                        "debttoequity",
+                        "sbcsales",
+                        "Insiders",
+                        "random_feature",
+                        "Own Change",
+                        "currentratio"
+                    ]
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 4,
+                    "eval_metric": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_Default_Xgboost_GoldenFeatures_SelectedFeatures",
+                "status": "trained",
+                "final_loss": -0.6745365668685144,
+                "train_time": 4.407088041305542,
+                "data_type": "original_golden_features_features_selection",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "drop_features": [
+                        "HOUST",
+                        "BUSINVchange",
+                        "ptb",
+                        "UNDCONTSA",
+                        "WBAA_ratio_WGS10YR",
+                        "TOTALSL",
+                        "DGORDER",
+                        "UNDCONTSA_multiply_WGS10YR",
+                        "TOTALSLchange",
+                        "BUSINV",
+                        "TCU",
+                        "INDPROchange",
+                        "fedfunds",
+                        "TCUchange",
+                        "SPCS20RSA",
+                        "TCUchange_ratio_WBAA",
+                        "DEXUSEU",
+                        "BOGMBASE",
+                        "WGS3MO",
+                        "HOUSTchange",
+                        "SPCS20RSAchange",
+                        "m2supply",
+                        "WGS10YR",
+                        "BUSLOANS",
+                        "PSAVERT",
+                        "netdebtebitda",
+                        "debtgrowth",
+                        "UNDCONTSAchange",
+                        "WBAAchange",
+                        "pfcf",
+                        "debttoequity",
+                        "sbcsales",
+                        "Insiders",
+                        "random_feature",
+                        "Own Change",
+                        "currentratio"
+                    ]
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 6,
+                    "eval_metric_name": "average_precision",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "6_Default_RandomForest_SelectedFeatures",
+                "status": "trained",
+                "final_loss": -0.5937921517331304,
+                "train_time": 4.715055465698242,
+                "data_type": "original_features_selection",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "unrate": [
+                            "scale_normal"
+                        ],
+                        "m2supply": [
+                            "scale_normal"
+                        ],
+                        "m2supplychange": [
+                            "scale_normal"
+                        ],
+                        "fedfundschange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "WGS3MOchange": [
+                            "scale_normal"
+                        ],
+                        "WGS10YR": [
+                            "scale_normal"
+                        ],
+                        "WGS10YRchange": [
+                            "scale_normal"
+                        ],
+                        "WBAA": [
+                            "scale_normal"
+                        ],
+                        "WBAAchange": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEU": [
+                            "scale_normal"
+                        ],
+                        "DEXUSEUchange": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUS": [
+                            "scale_normal"
+                        ],
+                        "DEXCHUSchange": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSA": [
+                            "scale_normal"
+                        ],
+                        "SPCS20RSAchange": [
+                            "scale_normal"
+                        ],
+                        "INDPRO": [
+                            "scale_normal"
+                        ],
+                        "INDPROchange": [
+                            "scale_normal"
+                        ],
+                        "TCU": [
+                            "scale_normal"
+                        ],
+                        "TCUchange": [
+                            "scale_normal"
+                        ],
+                        "BUSINV": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BUSINVchange": [
+                            "scale_normal"
+                        ],
+                        "DGORDER": [
+                            "scale_normal"
+                        ],
+                        "DGORDERchange": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANS": [
+                            "scale_normal"
+                        ],
+                        "BUSLOANSchange": [
+                            "scale_normal"
+                        ],
+                        "TOTALSL": [
+                            "scale_normal"
+                        ],
+                        "TOTALSLchange": [
+                            "scale_normal"
+                        ],
+                        "HOUST": [
+                            "scale_normal"
+                        ],
+                        "HOUSTchange": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSA": [
+                            "scale_normal"
+                        ],
+                        "UNDCONTSAchange": [
+                            "scale_normal"
+                        ],
+                        "PSAVERT": [
+                            "scale_normal"
+                        ],
+                        "PSAVERTchange": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASE": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BOGMBASEchange": [
+                            "scale_normal"
+                        ],
+                        "Insiders": [
+                            "scale_normal"
+                        ],
+                        "Own Change": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Value Traded": [
+                            "scale_normal"
+                        ],
+                        "Price": [
+                            "scale_normal"
+                        ],
+                        "1ybeforepricechange": [
+                            "scale_normal"
+                        ],
+                        " pe ": [
+                            "scale_normal"
+                        ],
+                        "1ychangepe": [
+                            "scale_normal"
+                        ],
+                        "ps": [
+                            "scale_normal"
+                        ],
+                        "pocf": [
+                            "scale_normal"
+                        ],
+                        "pfcf": [
+                            "scale_normal"
+                        ],
+                        "pb": [
+                            "scale_normal"
+                        ],
+                        "ptb": [
+                            "scale_normal"
+                        ],
+                        "evs": [
+                            "scale_normal"
+                        ],
+                        "evebitda": [
+                            "scale_normal"
+                        ],
+                        "evocf": [
+                            "scale_normal"
+                        ],
+                        "evfcf": [
+                            "scale_normal"
+                        ],
+                        "debttoequity": [
+                            "scale_normal"
+                        ],
+                        "debttoassets": [
+                            "scale_normal"
+                        ],
+                        "netdebtebitda": [
+                            "scale_normal"
+                        ],
+                        "currentratio": [
+                            "scale_normal"
+                        ],
+                        "interestcoverage": [
+                            "scale_normal"
+                        ],
+                        "capexocf": [
+                            "scale_normal"
+                        ],
+                        "capexsales": [
+                            "scale_normal"
+                        ],
+                        "sbcsales": [
+                            "scale_normal"
+                        ],
+                        "roic": [
+                            "scale_normal"
+                        ],
+                        "roe": [
+                            "scale_normal"
+                        ],
+                        "salesgrowth": [
+                            "scale_normal"
+                        ],
+                        "ebitgrowth": [
+                            "scale_normal"
+                        ],
+                        "fcfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3ysalesgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yocfgrowth": [
+                            "scale_normal"
+                        ],
+                        "3yequitygrowth": [
+                            "scale_normal"
+                        ],
+                        "debtgrowth": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification",
+                    "golden_features": {
+                        "results_path": "final_model_short",
+                        "ml_task": "binary_classification",
+                        "n_jobs": -1
+                    },
+                    "drop_features": [
+                        "HOUST",
+                        "BUSINVchange",
+                        "ptb",
+                        "UNDCONTSA",
+                        "WBAA_ratio_WGS10YR",
+                        "TOTALSL",
+                        "DGORDER",
+                        "UNDCONTSA_multiply_WGS10YR",
+                        "TOTALSLchange",
+                        "BUSINV",
+                        "TCU",
+                        "INDPROchange",
+                        "fedfunds",
+                        "TCUchange",
+                        "SPCS20RSA",
+                        "TCUchange_ratio_WBAA",
+                        "DEXUSEU",
+                        "BOGMBASE",
+                        "WGS3MO",
+                        "HOUSTchange",
+                        "SPCS20RSAchange",
+                        "m2supply",
+                        "WGS10YR",
+                        "BUSLOANS",
+                        "PSAVERT",
+                        "netdebtebitda",
+                        "debtgrowth",
+                        "UNDCONTSAchange",
+                        "WBAAchange",
+                        "pfcf",
+                        "debttoequity",
+                        "sbcsales",
+                        "Insiders",
+                        "random_feature",
+                        "Own Change",
+                        "currentratio"
+                    ]
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "final_model_short\\X.data",
+                    "y_path": "final_model_short\\y.data",
+                    "results_path": "final_model_short"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 5,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_NeuralNetwork_GoldenFeatures_SelectedFeatures",
+                "status": "trained",
+                "final_loss": -0.32228763453750636,
+                "train_time": 1.99344801902771,
+                "data_type": "original_golden_features_features_selection",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": -0.6745365668685144,
+                "train_time": 0.46810412406921387
+            }
+        ]
+    },
+    "adjust_validation": false
+}
